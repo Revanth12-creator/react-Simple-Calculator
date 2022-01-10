@@ -1,0 +1,19 @@
+h1,
+p {
+  font-family: Lato;
+}
+.secDev {
+  align-items: center;
+  margin-left: 50px;
+  background-color: aqua;
+}
+button {
+  border-radius: 5px;
+  margin: 10px;
+}
+button:hover {
+  color: brown;
+}
+.heading {
+  color: darkolivegreen;
+}
