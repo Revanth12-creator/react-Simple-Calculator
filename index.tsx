@@ -9,6 +9,7 @@ function App() {
   const [symbals, setSymbals] = useState('');
 
   const handlerFun = (value) => {
+    console.log(value);
     if (status) {
       secondValue.push(value);
     } else {
@@ -20,6 +21,9 @@ function App() {
     e.preventDefault();
     var fTotal = firstValue.join('');
     var sTotal = secondValue.join('');
+    console.log(fTotal);
+    console.log(sTotal);
+
     if (symbals == '+') {
       setTotal(Number(fTotal) + Number(sTotal));
     } else if (symbals == '-') {
@@ -35,7 +39,7 @@ function App() {
       window.location.reload();
     }, 3000);
   };
-  console.log('symbals', symbals);
+  console.log('total', total);
 
   return (
     <div className="col-md-6 mx-auto main ">
@@ -50,7 +54,7 @@ function App() {
               handlerFun(e.target.value);
             }}
           >
-            <h1>0</h1>
+            0
           </button>
         </div>
         <div>
@@ -60,7 +64,7 @@ function App() {
               handlerFun(e.target.value);
             }}
           >
-            <h1>1</h1>
+            1
           </button>
           <button
             value={'2'}
@@ -68,7 +72,7 @@ function App() {
               handlerFun(e.target.value);
             }}
           >
-            <h1>2</h1>
+            2
           </button>
           <button
             value={'3'}
@@ -77,7 +81,7 @@ function App() {
               handlerFun(e.target.value);
             }}
           >
-            <h1>3</h1>
+            3
           </button>
         </div>
         <div>
@@ -87,7 +91,7 @@ function App() {
               handlerFun(e.target.value);
             }}
           >
-            <h1>4</h1>
+            4
           </button>
           <button
             value={'5'}
@@ -95,7 +99,7 @@ function App() {
               handlerFun(e.target.value);
             }}
           >
-            <h1>5</h1>
+            5
           </button>
           <button
             value={'6'}
@@ -103,7 +107,7 @@ function App() {
               handlerFun(e.target.value);
             }}
           >
-            <h1>6</h1>
+            6
           </button>
         </div>
         <div>
@@ -113,7 +117,7 @@ function App() {
               handlerFun(e.target.value);
             }}
           >
-            <h1>7</h1>
+            7
           </button>
           <button
             value={'8'}
@@ -121,7 +125,7 @@ function App() {
               handlerFun(e.target.value);
             }}
           >
-            <h1>8</h1>
+            8
           </button>
           <button
             value={'9'}
@@ -129,7 +133,7 @@ function App() {
               handlerFun(e.target.value);
             }}
           >
-            <h1>9</h1>
+            9
           </button>
         </div>
         <div>
@@ -185,9 +189,7 @@ function App() {
           </button>
         </div>
         <div>
-          <button onClick={subit}>
-            <h1>OK</h1>
-          </button>
+          <button onClick={subit}>OK</button>
         </div>
         <h1>Total:{total}</h1>
       </div>
